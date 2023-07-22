@@ -240,7 +240,15 @@ button {
   background-color: var(--pressed-state-cta);
   color: var(--header-team-card-background);
 }
+.modal-button:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 
+.modal-button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 /* ==========/BUTTON MENU========== */
 
 /* ==========SECTION 1========== */
@@ -360,12 +368,12 @@ button {
   margin-top: 72px;
   display: flex;
   gap: 24px;
-  border-radius: 0 0 4px 4px;
 }
 
 .workers-item {
   text-align: center;
   text-transform: capitalize;
+  border-radius: 0 0 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: var(--light-mode-backgrounds);
@@ -404,7 +412,7 @@ button {
 }
 
 .costumers-icon {
-  fill: var(--body-text-light-slate);
+  fill: currentColor;
 }
 
 .costumers-item .costumers-link:focus,
@@ -438,10 +446,21 @@ button {
 }
 
 .gallery-item {
+  display: block;
   flex-basis: calc(
     (100% - var(--column-indent) * calc(var(--column-items) - 1)) /
       var(--column-items)
   );
+}
+
+.gallery-item:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .gallery-content {
@@ -455,19 +474,30 @@ button {
 /* ==========FOOTER========== */
 
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: var(--dark-overlays-shadows-headings);
 }
 .footer-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
+  gap: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer-list {
   display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
+
 .background-dark-text {
-  width: 264px;
+  max-width: 264px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: var(--light-mode-backgrounds);
 }
 
