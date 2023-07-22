@@ -332,8 +332,12 @@ button {
   justify-content: space-between;
   gap: 24px;
   margin-top: 72px;
+}
+
+.production-item {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0 0 4px 4px;
 }
 
 /* ==========/Production========== */
@@ -353,16 +357,18 @@ button {
 }
 
 .workers-list {
+  margin-top: 72px;
   display: flex;
   gap: 24px;
-
-  background-color: var(--light-mode-backgrounds);
-  margin-top: 72px;
+  border-radius: 0 0 4px 4px;
 }
 
 .workers-item {
   text-align: center;
   text-transform: capitalize;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  background-color: var(--light-mode-backgrounds);
 }
 
 /* ==========/Workers========== */
@@ -374,7 +380,7 @@ button {
 }
 
 .costumers-list {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   gap: 24px;
 }
@@ -382,6 +388,8 @@ button {
 .costumers-item {
   width: 168px;
   height: 88px;
+  color: var(--body-text-light-slate);
+  border-color: var(--pressed-state-cta);
 }
 
 .costumers-link {
@@ -392,11 +400,10 @@ button {
   height: 100%;
   border-radius: 4px;
   border: 1px solid var(--body-text-light-slate);
+  color: var(--body-text-light-slate);
 }
 
 .costumers-icon {
-  width: 104px;
-  height: 56px;
   fill: var(--body-text-light-slate);
 }
 
@@ -405,6 +412,7 @@ button {
 .costumers-icon:focus,
 .costumers-icon:hover {
   border-color: (var(--pressed-state-cta));
+  color: var(--pressed-state-cta);
   fill: var(--pressed-state-cta);
 }
 
